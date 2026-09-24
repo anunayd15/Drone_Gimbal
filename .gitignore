@@ -1,0 +1,15 @@
+#CMake
+**/build/
+**/CMakeFiles/
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/build.ninja
+**/.ninja_deps
+**/.ninja_log
+
+# Visual Studio
+.vs/
+
+# Python
+**/__pycache__/
+*.pyc
