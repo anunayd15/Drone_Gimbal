@@ -3,6 +3,6 @@
 using namespace std;
 
 int main(){
-    std::cout << "Controller starting..." << std::endl;
+    cout << "Controller starting..." << endl;
     return 0;
 }
