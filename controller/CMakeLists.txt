@@ -58,7 +58,10 @@ add_custom_target(generate_mavlink
 
 add_executable(
     DroneGimbal
-    cplus_files/test.cpp
+    # cplus_files/test.cpp
+    cplus_files/main.cpp
+    cplus_files/MavlinkHandler.cpp
+    cplus_files/GimbalController.cpp
 )
 
 add_dependencies(
@@ -66,8 +69,9 @@ add_dependencies(
     generate_mavlink
 )
 
-target_include_directories(
-    DroneGimbal
-    PRIVATE
-        "${MAVLINK_GENERATED_DIR}"
-)
+    target_include_directories(
+        DroneGimbal
+        PRIVATE
+            "${MAVLINK_GENERATED_DIR}"
+            "${CMAKE_CURRENT_SOURCE_DIR}/cplus_files"
+    )
